@@ -1,0 +1,10 @@
+#recipe Blog
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "dinobansigan.com";
+Settings[BlogKeys.Title] = "Dino Bansigan";
+Settings[BlogKeys.Description] = "Dino Bansigan";
+Settings[BlogKeys.Intro] = "Welcome to my personal blog where I talk mostly about software development "
+    + " and chronicle my experiences as a .NET software developer.";
+
+// Add any pipeline customizations here
