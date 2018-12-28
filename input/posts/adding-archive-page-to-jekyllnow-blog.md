@@ -96,5 +96,5 @@ Archive page is generated, it will use the layout/html that you have specified i
 - The Permalink entry is used to ensure that the generated Archive page shows up on "yourdomainname.com/archive/". You can also supposedly 
 set this in the configuration file, but I just chose to do it here.
 
-There you have it, that wasn't too hard I think. For reference, you can view the source code for this website on [Github](https://github.com/DinoBansigan/dinobansigan.github.io) 
+There you have it, that wasn't too hard I think. For reference, you can view the source code for this website on [Github](https://github.com/DinoBansigan/JekyllNowBlog) 
 to see how I implemented it.

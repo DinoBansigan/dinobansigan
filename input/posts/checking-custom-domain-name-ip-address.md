@@ -5,6 +5,8 @@ Tags:
   - Ping
   - Windows
 ---
+*Update 12/27/2018: The ping command is also available on a MacOS terminal.*
+
 I finally have my own custom domain and this site is now on "dinobansigan.com" as opposed to "dinobansigan.github.io". 
 I initially had trouble getting the site up and running on my custom domain. I [learned](https://help.github.com/articles/setting-up-an-apex-domain/) that you need to add A records to make a custom 
 domain work with Github pages. So I did that but I still couldn't get to the site. 
