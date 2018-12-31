@@ -22,14 +22,14 @@ At this point you can do a Wyam build to make sure it works and that nothing is 
 
 ## Step 2: Add code to calculate "time to read" in the _PostHeader.cshtml file
 
-To calculate the time to read value for a blog post, we can use [Razor](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c), which is one of th reasons why I like using Wyam. At the top of the file I added the following lines of code:
+To calculate the time to read value for a blog post, we can use [Razor](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c), which is one of the reasons why I like using Wyam. At the top of the file I added the following lines of code:
 
 ```
 char[] delimiters = new char[] {' ', '\r', '\n' };
 var numberOfWords = Document.Content.Split(delimiters, StringSplitOptions.RemoveEmptyEntries).Length;
 var TimeToRead = Math.Ceiling(numberOfWords / 200f).ToString();
 ```
-What we're doing here is getting the content of the current blog post, then splitting it into an array to get how many words are in the blog post. I actually got that code from a [StackOverflow answer](https://stackoverflow.com/a/8784662/5041911). Then we divide the number of words by 200 to get a conservative to time to read estimate value in minutes, which is then converted to a string.
+What we're doing here is getting the content of the current blog post, then splitting it into an array to get how many words are in the blog post. I actually got that code from a [StackOverflow answer](https://stackoverflow.com/a/8784662/5041911). Then we divide the number of words by 200 to get a conservative time to read estimate value in minutes, which is then converted to a string.
 
 To display the time to read estimate, I modified the line of code that displays the date the post was published and I ended up with this:
 
