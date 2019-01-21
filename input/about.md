@@ -19,5 +19,6 @@ When I'm not writing code, I spend most of my time with my family. I love going 
 - [LinkedIn](https://www.linkedin.com/in/dinobansigan)
 - [Github](https://github.com/DinoBansigan)
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
+- [Twitter](https://twitter.com/dinobansigan)
 
 You can send me an email at *dinobansigan **[at]** live.com*
