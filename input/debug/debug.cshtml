@@ -1,0 +1,24 @@
+Title: Debug
+---
+@{
+    Layout = "/_Layout.cshtml";
+}
+
+<div style="font-style: italic;">
+    A list of all pages and their metadata...
+</div>
+
+@{
+    bool first = true;
+    foreach(IDocument post in Documents)
+    {
+        <h2>@post["Title"].ToString()</h2>
+        <text>Id = @post.Id<br /></text>
+        foreach(KeyValuePair<string, object> entry in post.Metadata)
+        {
+            // do something with entry.Value or entry.Key
+            <text>Key = @entry.Key - Value = @entry.Value<br /></text>
+        }
+
+    }
+}

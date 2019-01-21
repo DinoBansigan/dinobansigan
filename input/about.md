@@ -14,7 +14,7 @@ On this blog I plan to write mainly about software development, my experiences a
 
 When I'm not writing code, I spend most of my time with my family. I love going on roadtrips and doing bike rides with my wife and our energetic toddler. I enjoy playing board games and video games with my wife. I love reading books and listening to rock music.
 
-### Contact me
+### Find me on
 
 - [LinkedIn](https://www.linkedin.com/in/dinobansigan)
 - [Github](https://github.com/DinoBansigan)

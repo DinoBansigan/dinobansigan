@@ -1,0 +1,38 @@
+@{
+    List<Tuple<string, string>> pages = Context
+        .Documents[Blog.Pages]
+        .Where(x => x.Bool(BlogKeys.ShowInNavbar, true))
+        .Where(x => x.FilePath(Keys.RelativeFilePath)?.FullPath?.StartsWith("index") == (bool?)false)
+        .Select(x => Tuple.Create(x.WithoutSettings.String(Keys.Title), Context.GetLink(x)))
+        .Where(x => !string.IsNullOrEmpty(x.Item1))
+        .OrderBy(x => x.Item1)
+        .ToList();
+    if (Documents[Blog.Tags].Any())
+    {
+        pages.Insert(0, Tuple.Create("Tags", Context.GetLink("tags/index.html")));
+    }
+    if (Documents[Blog.BlogPosts].Any() && Context.Bool(BlogKeys.GenerateArchive))
+    {
+        pages.Insert(0, Tuple.Create("Archive", Context.GetLink(Context.String(BlogKeys.PostsPath) + "/index.html")));
+    }
+
+    // This is to control the order of links that show up in the Navbar. I find the link that I want and
+    // add them to the new mainPages variable in the order that I want them to show up.
+    List<Tuple<string, string>> mainPages = new List<Tuple<string, string>>();
+    mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "ARCHIVE"));
+    mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "BOOKMARKS"));
+    mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "TAGS"));
+
+    foreach(Tuple<string, string> page in mainPages)
+    {
+        <li><a href="@(page.Item2)">@(page.Item1)</a></li>
+        pages.Remove(page);
+    }
+    
+    // If there are still other links that wasn't covered in the foreach loop above, they will show up here
+    // in whatever order they were added to the pages variable.
+    foreach(Tuple<string, string> page in pages)
+    {
+        <li><a href="@(page.Item2)">@(page.Item1)</a></li>
+    }
+}

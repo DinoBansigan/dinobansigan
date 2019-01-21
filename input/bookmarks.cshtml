@@ -1,0 +1,56 @@
+Title: Bookmarks
+
+---
+@{
+    Layout = "/_Layout.cshtml";
+}
+
+<div style="font-style: italic;">
+    A collection of links to interesting articles I've found around the web...
+    <hr />
+</div>
+
+@{
+    List<string> uniquePostIds = new List<string>();
+
+    bool first = true;
+    foreach(IDocument post in Documents.OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published)))
+    {
+        string category = post.Get<string>("Category");
+
+        if (uniquePostIds.Any(p => p == post.Id) || 
+           (category == null || category.ToUpper() != "BOOKMARKS"))
+        {
+            continue;
+        }
+        else
+        {
+            uniquePostIds.Add(post.Id);
+        }
+
+        if (!first)
+        {
+            <hr /> 
+        }
+        first = false;
+        string lead = post.String(BlogKeys.Lead);
+        <div class="post-preview">
+            <a href="@Context.GetLink(post)">
+                <h2 class="post-title">@post.WithoutSettings.String(BlogKeys.Title)</h2>
+                @if(!string.IsNullOrWhiteSpace(lead))
+                {
+                    <h3 class="post-subtitle">@lead</h3>
+                }
+            </a>
+            <p class="post-meta">Posted on @(post.Get<DateTime>(BlogKeys.Published).ToLongDateString(Context))</p>
+            @if(Context.Bool(BlogKeys.IndexFullPosts))
+            {
+                @Html.Raw(post.Content)
+            }
+            else
+            {
+                @Html.Raw(post.String(BlogKeys.Excerpt))
+            }             
+        </div>   
+    }
+}

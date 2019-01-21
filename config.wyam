@@ -6,5 +6,24 @@ Settings[BlogKeys.Title] = "Dino Bansigan";
 Settings[BlogKeys.Description] = "Dino Bansigan";
 Settings[BlogKeys.Intro] = "Welcome to my personal blog where I talk mostly about software development "
     + " and chronicle my experiences as a .NET software developer.";
+Settings[BlogKeys.IgnoreFolders] = "debug";
 
 // Add any pipeline customizations here
+Pipelines["BlogPosts"].Append(
+  Meta(Keys.RelativeFilePath, (doc, ctx) => //change relative file path
+  {
+	  	string fileName = doc.Bool("FrontMatterPublished")
+			? doc.FilePath(Keys.SourceFileName).ChangeExtension("html").FullPath
+			: doc.FilePath(Keys.SourceFileName).ChangeExtension("html").FullPath.Substring(11);//when date is specified in fileName
+    	
+		string category = doc.Get<string>("Category");
+
+		if (category != null && category.ToUpper() == "BOOKMARKS")
+		{
+			return $"{category.ToLower()}/{fileName}";
+		}
+		else 
+		{
+			return $"posts/{fileName}";
+		}
+  }));
