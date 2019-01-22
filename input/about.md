@@ -21,4 +21,4 @@ When I'm not writing code, I spend most of my time with my family. I love going 
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
 - [Twitter](https://twitter.com/dinobansigan)
 
-You can send me an email at *dinobansigan **[at]** live.com*
+The best way to contact me is to send me an email at *dinobansigan **[at]** live.com*, or you can also [ask me a question on Github](https://github.com/DinoBansigan/ama/issues/new).
