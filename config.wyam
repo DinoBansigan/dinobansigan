@@ -4,8 +4,7 @@
 Settings[Keys.Host] = "dinobansigan.com";
 Settings[BlogKeys.Title] = "Dino Bansigan";
 Settings[BlogKeys.Description] = "Dino Bansigan";
-Settings[BlogKeys.Intro] = "Welcome to my personal blog where I talk mostly about software development "
-    + " and chronicle my experiences as a .NET software developer.";
+Settings[BlogKeys.Intro] = "Welcome to my personal blog where I chronicle my experiences as a .NET software developer and occasionally talk about other topics that interest me outside of work.";
 Settings[BlogKeys.IgnoreFolders] = "debug";
 
 // Add any pipeline customizations here
