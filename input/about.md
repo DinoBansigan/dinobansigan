@@ -20,6 +20,7 @@ When I'm not writing code, I spend most of my time with my family. I love going 
 - [Github](https://github.com/DinoBansigan)
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
 - [Twitter](https://twitter.com/dinobansigan)
+- [Goodreads](https://www.goodreads.com/user/show/90799767-dino-bansigan)
 
 <h3 id="ContactMe">Contact me</h3>
 
