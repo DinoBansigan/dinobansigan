@@ -23,4 +23,4 @@ So I'm sharing a post I found (and I found a number of them, just Google it with
 
 Visit Original Post: [5 Reasons to Read Fiction](https://ruggedfellowsguide.com/5-reasons-read-fiction/)
 
-*At the moment, I'm reading [The Shadow that was Lost](https://www.goodreads.com/book/show/22878967-the-shadow-of-what-was-lost) by James Islington. So far it has been a great book, that is really hard to put down.*
+*At the moment, I'm reading [The Shadow of What Was Lost](https://www.goodreads.com/book/show/22878967-the-shadow-of-what-was-lost) by James Islington. So far it has been a great book, one that is really hard to put down.*
