@@ -36,7 +36,7 @@ Robo 3T has a "view results in text mode" option that will display the results i
 
 So now we have a list of ObjectIds from MongoDB. Imagine if you got back thousands of ObjectIds. It would be tempting at this point to say something like, hey I need to write a console app that can parse these results. I know I did. And I did write such an app, but eventually I realized I didn't need to. All I needed was Notepad++. *Actually any text editor with a good enough "search and replace" feature will work.*
 
-After copying those results from Robot 3T into Notepad++, you can then use the "search and replace" functionality to transform the results into INSERT scripts that you can run in SQL Server.
+After copying those results from Robo 3T into Notepad++, you can then use the "search and replace" functionality to transform the results into INSERT scripts that you can run in SQL Server.
 
 So first thing you need to do is comment out all those brackets `{` and `}`. To do this, you simply search for `{` or `}` and replace the values with `--{` or `--}`. Adding `--` to the start of a line will comment it out in SQL Server. You can also opt to simply just delete all those brackets. SQL Server won't care if there are spaces between INSERT scripts. At this point your text file in Notepad++ will look similar to what I have below.
 ```
@@ -58,7 +58,7 @@ So first thing you need to do is comment out all those brackets `{` and `}`. To 
 
 The second thing you need to do is to transform the lines with the ObjectId values in it, into SQL Server INSERT statements. To do this you go through two steps:
    1. Search for `"_id" : ObjectId("` and replace the values with `INSERT INTO [dbo].[MongoDbObjectIds] ([ObjectId]) VALUES ('`. *(This is assuming you have a MongoDbObjectIds table in SQL Server with an ObjectId column.)*
-   2. Search for `")` and replace the values with `');`. This will round out the INSERT statements and at this point, you should have valid INSERT statements that can be used in SQL Server. They should look similar to the ones I have below.
+   2. Search for `")` and replace the values with `');`. This will round out the INSERT statements. At this point, you should have valid INSERT statements that can be used in SQL Server. They should look similar to the ones I have below.
    ```
    /* 1 */
    --{
@@ -78,6 +78,6 @@ The second thing you need to do is to transform the lines with the ObjectId valu
 
 All that needs to be done now is to copy the INSERT statements, run them in SQL Server Management Studio and you are done. 
 
-*Now it must be noted that this approach to getting ObjectIds out of MongoDB and into SQL Server is useful if you are only doing it once or twice. As soon as you have to repeat this process multiple times or often enough, then by all means write a migration/utility app to automate the process. It might take you longer to finish it, but the reusability of said migration application will pay for itself in time saved in the future.*
+*Now it must be noted that this approach to getting ObjectIds out of MongoDB and into SQL Server, is useful only if you are doing it once or twice. As soon as you have to repeat this process multiple times throughout the week or worse, throughout the day, then by all means write a migration/utility app to automate the process. It might take you longer to finish it, but the reusability of said migration application will pay for itself in the future.*
 
 Hope you found this post helpful. Happy Friday to everyone!
