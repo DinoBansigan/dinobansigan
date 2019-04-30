@@ -15,8 +15,9 @@ On this blog I plan to write about my experiences as a .NET software developer a
 - [LinkedIn](https://www.linkedin.com/in/dinobansigan)
 - [Github](https://github.com/DinoBansigan)
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
-- [Twitter](https://twitter.com/dinobansigan)
 - [Goodreads](https://www.goodreads.com/user/show/90799767-dino-bansigan)
+
+*If you are a personal friend (i.e. friend from high-school, college, etc...) and you want to find out what I'm up to these days, send me an email and I can point you to my personal blog and social media accounts.*
 
 <h3 id="ContactMe">Contact me</h3>
 

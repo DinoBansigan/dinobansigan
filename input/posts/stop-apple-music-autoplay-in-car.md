@@ -7,7 +7,7 @@ Tags:
 ---
 I love listening to music in my car using the Spotify *(or occasionally Pandora )* app on my iPhone 6S. Unfortunately, most of the time, my iPhone will start playing music from the Apple Music app as soon as it establishes a bluetooth connection with my car. Sometimes it will autoplay music using the Spotify app if I was using it prior, but most of the time it defaults to Apple Music. So I would have to manually open Spotify to switch to the music I want to listen to. 
 
-For some reason I've simply put up with it this for years now... Well not anymore. I eventually got tired of having to manually open the Spotify app, so last week I spent time trying to come up with a solution.
+For some reason I've simply put up with this for years now... Well not anymore. I eventually got tired of having to manually open the Spotify app, so last week I spent time trying to come up with a solution.
 
 One of the good suggestions I saw online was to turn off music streaming via your phone's data (LTE). This made sense to me. No music streaming access, would mean no autoplaying of music. I also barely had any music stored locally on my phone, so it should work. 
 
