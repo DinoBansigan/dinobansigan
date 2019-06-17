@@ -38,7 +38,7 @@ On the consumer side, you will need to add code to retrieve the Publish Date fro
 consumer.Received += (model, ea) =>
 {
     byte[] publishDateHeader = (byte[])ea.BasicProperties.Headers["PublishDate"];
-    DateTime publishDate = Convert.ToDateTime(Encoding.UTF8.GetString(publishDateBytes));
+    DateTime publishDate = Convert.ToDateTime(Encoding.UTF8.GetString(publishDateHeader));
     // Now you can delay message processing based on the publish date value
 
     var body = ea.Body;
