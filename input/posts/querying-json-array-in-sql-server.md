@@ -31,3 +31,14 @@ WITH
        [value] BIGINT '$'
 );
 ```
+<hr />
+
+*<h4>Update: 2019-07-17</h4>*
+
+Adding another example for a JSON array that came from an Int list in C#. This is how you could query it in SQL Server.
+```
+DECLARE @OrderIds VARCHAR(MAX) = '{"$type":"System.Int64[], mscorlib","$values":[4, 5, 7, 999]}';
+
+SELECT [value] AS OrderId
+FROM OPENJSON(@OrderIds, '$."$values"');
+```
