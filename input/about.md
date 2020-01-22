@@ -15,7 +15,7 @@ On this blog I plan to write about my experiences as a .NET software developer. 
 - [LinkedIn](https://www.linkedin.com/in/dinobansigan)
 - [Github](https://github.com/DinoBansigan)
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
-- [Goodreads](https://www.goodreads.com/user/show/90799767-dino-bansigan)
+- [Glitch](https://glitch.com/@DinoBansigan)
 
 *If you are a personal friend (i.e. friend from high-school, college, etc...) and you want to find out what I'm up to these days, or for non software development content, you can also check out my [online journal](https://journal.dinobansigan.com/).*
 
