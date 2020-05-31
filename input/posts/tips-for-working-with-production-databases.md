@@ -4,7 +4,7 @@ Tags:
    - Database
    - SQL Server
 ---
-A few weeks ago, a co-worker unintentionally ran migration scripts on a Production database. Obviously this caused some problems and our boss had to scramble to rollback the changes. In this post, I'll share some tips for working with Production databases so the same thing doesn't happen to you.
+Unintentionally running data manipulation scripts on a Production database is obviously bad. In this post, I'll share some tips for working with Production databases so the same thing doesn't happen to you.
 
 ### 1. Check your Database Connections
 
