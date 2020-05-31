@@ -18,7 +18,3 @@ On this blog I plan to write about my experiences as a .NET software developer. 
 - [Glitch](https://glitch.com/@DinoBansigan)
 
 *If you are a personal friend (i.e. friend from high-school, college, etc...) and you want to find out what I'm up to these days, or for non software development content, you can also check out my [online journal](https://journal.dinobansigan.com/).*
-
-<h3 id="ContactMe">Contact me</h3>
-
-The best way to contact me is to send me an email at *dinobansigan **[at]** live.com*. You can also [ask me a question on Github](https://github.com/DinoBansigan/ama/issues/new).
