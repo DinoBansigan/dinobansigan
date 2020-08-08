@@ -4,7 +4,7 @@ Hey there, my name is **Dino Bansigan**.
 
 I am a .NET Software Developer currently working for a financial company in the DFW area. I enjoy working with C# and SQL Server. I love writing code that talks to the database and vice versa.
 
-When I'm not writing code, I spend most of my time with my family. I love going on roadtrips and bike rides with my wife and our energetic toddler. I enjoy playing board games and video games with my wife. I love reading books and listening to rock music.
+When I'm not writing code, I spend most of my time with my family. I love going on roadtrips and bike rides with my wife and our kids. *The pandemic has put a hold on those activities recently.* I enjoy playing board games and video games with my wife. I love reading books and listening to rock music.
 
 ### About This Blog
 
@@ -17,4 +17,4 @@ On this blog I plan to write about my experiences as a .NET software developer. 
 - [StackOverflow](https://stackoverflow.com/users/5041911/dino-bansigan)
 - [Glitch](https://glitch.com/@DinoBansigan)
 
-*If you are a personal friend (i.e. friend from high-school, college, etc...) and you want to find out what I'm up to these days, or for non software development content, you can also check out my [online journal](https://journal.dinobansigan.com/).*
+*If you are a personal friend (i.e. friend from high-school, college, etc...) and you want to find out what I'm up to these days, or for non software development content, you can also check out my [online journal](https://journal.dinobansigan.com/) and my [micro journal](https://microjournal.dinobansigan.com).*
