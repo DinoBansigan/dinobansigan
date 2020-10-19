@@ -1,0 +1,30 @@
+<div class="site-heading">
+    @if(Context.String(BlogKeys.Description) != null)
+    {
+        <h1>@Context.String(BlogKeys.Description)</h1>
+    }
+    @if(Context.String(BlogKeys.Intro) != null)
+    {
+        @if(Context.String(BlogKeys.Description) != null)
+        {
+            <hr class="small">
+        }
+        <div class="subheading">
+            <p>
+                Welcome to my personal home on the web. I am a .NET Software Developer currently working in the DFW area. When I'm not writing code, I like to spend time with 
+                my family. I've been blessed with a beautiful wife and two kids. In my spare time I like to read books, listen to rock music, play video games, write on my 
+                journal and well... write code.
+            </p>
+            <p>
+                You must have stumbled upon this website for a reason. If you were looking for my dev blog, then you're already in the right place. If you were looking for my 
+                other websites, <em>which are scattered under</em> <strong>dinobansigan.com</strong>, then we can sort that out too. I have a 
+                <a href="https://journal.dinobansigan.com">personal journal</a>, a <a href="https://microjournal.dinobansigan.com">microblog</a>, a 
+                <a href="https://nowlisteningto.dinobansigan.com">music blog</a> and a <a href="https://ateas.dinobansigan.com">photoblog</a>. Take your pick and 
+                <a href="https://dinobansigan.com/contact">let me know</a> how they work out for you.
+            </p>
+            <p>
+                Thank you for visiting and I hope you have a wonderful day.
+            </p>
+        </div>
+    }
+</div>

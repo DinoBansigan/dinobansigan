@@ -1,4 +1,4 @@
-Title: Contact Me
+Title: Contact
 ---
 The quickest way to contact me is to send me a message using the form below. Alternatively, you can send me an email at *dinobansigan **[at]** live.com*. You can also [ask me a question on Github](https://github.com/DinoBansigan/ama/issues/new).
 

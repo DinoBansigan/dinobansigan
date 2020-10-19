@@ -1,0 +1,107 @@
+Title: Latest Posts
+Description: Welcome to my dev blog where I chronicle my experiences as a .NET software developer.
+ShowInNavbar: True
+IsPost: False
+---
+@section Header {
+    @Html.Partial("_LatestpostsHeader")
+}
+
+<div class="row">
+    <div class="col-sm-8 right-border">
+        @{
+            List<string> uniquePostIds = new List<string>();
+            bool first = true;
+            foreach(IDocument post in Documents.Where(x => x.Get<bool>(BlogKeys.ShowInNavbar) == false)
+                                               .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published)))
+            {
+                if (uniquePostIds.Any(p => p == post.Id))
+                {
+                    continue;
+                }
+                else
+                {
+                    uniquePostIds.Add(post.Id);
+                }
+
+                if (!first)
+                {
+                    <hr />
+                }
+                first = false;
+                string lead = post.String(BlogKeys.Lead);
+                <div class="post-preview">
+                    <a href="@Context.GetLink(post)">
+                        <h2 class="post-title">@post.WithoutSettings.String(BlogKeys.Title)</h2>
+                        @if(!string.IsNullOrWhiteSpace(lead))
+                        {
+                            <h3 class="post-subtitle">@lead</h3>
+                        }
+                    </a>
+                    <p class="post-meta">Posted on @(post.Get<DateTime>(BlogKeys.Published).ToLongDateString(Context))</p>
+                    @if(Context.Bool(BlogKeys.IndexFullPosts))
+                    {
+                        @Html.Raw(post.Content)
+                    }
+                    else
+                    {
+                        @Html.Raw(post.String(BlogKeys.Excerpt))
+                    }
+                    <ul class="pager">
+                        <li class="previous">
+                            <a href="@Context.GetLink(post)">Read More &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+
+                if (uniquePostIds.Count >= 3)
+                {
+                    break;
+                }
+            }
+        }
+    </div>
+    <div class="col-sm-4 sidebar">
+        <hr class="visible-xs-block" />
+
+        @if(Documents[Blog.Tags].Any())
+        {
+            <h5>Tags</h5>
+            <div>
+                @foreach (IDocument tagDocument in Documents[Blog.Tags]
+                    .GroupBy(x => x.String(BlogKeys.Tag)).Select(x => x.Where(p => p.Get<int>(Keys.CurrentPage) == 1).First())
+                    .OrderByDescending(x => x.Get<int>(Keys.TotalItems)).Take(10))
+                {
+                    string tag = tagDocument.String(BlogKeys.Tag);
+                    string postCount = tagDocument.String(Keys.TotalItems);
+                    <a role="button" href="@Context.GetLink(tagDocument)" class="btn btn-default btn-sm"> @tag (@postCount)</a>
+                }
+            </div>
+            <ul class="pager">
+                <li class="next">
+                    <a href="@Context.GetLink("tags/index.html")">View All Tags &rarr;</a>
+                </li>
+            </ul>
+        }
+        <hr />
+        <h5>Older Posts</h5>
+        <ul class="list-unstyled">
+            @foreach(IDocument post in Documents[Blog.BlogPosts].Skip(3).Take(4))
+            {        
+                // TODO: The skip above needs to line up with the number of posts on the index page
+                // Also turn this section off if the index is paged
+                <li><a href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a></li>
+            }
+        </ul>
+        @if(Context.Bool(BlogKeys.GenerateArchive))
+        {
+            <ul class="pager">
+                <li class="next">
+                    <a href="@Context.GetLink(Context.String(BlogKeys.PostsPath))">Archive &rarr;</a>
+                </li>
+            </ul>
+        }
+
+        @Html.Partial("_Sidebar")
+    </div> 
+</div>

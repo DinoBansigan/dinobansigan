@@ -3,8 +3,8 @@
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "dinobansigan.com";
 Settings[BlogKeys.Title] = "Dino Bansigan";
-Settings[BlogKeys.Description] = "Dino Bansigan";
-Settings[BlogKeys.Intro] = "Welcome to my dev blog where I chronicle my experiences as a .NET software developer.";
+Settings[BlogKeys.Description] = "Hey there, I'm Dino";
+Settings[BlogKeys.Intro] = "Welcome to my personal home on the web. I am a .NET Software Developer currently working for a financial company in the DFW area. When I'm not writing code, I like to spend time with my family. I am married to a beautiful wife and have been blessed with two kids. In my spare time I like to play video games, read books, write on my journal and well... write code.\r\nYou must have stumbled upon this website for a reason. If you were looking for my dev blog, then you're already in the right place. If you were looking for my other websites, which are scattered under dinobansigan.com, then we can sort that out too. I have a <a href=\"https://journal.dinobansigan.com\">personal journal</a>, a <a href=\"https://microjournal.dinobansigan.com\">microblog</a>, a <a href=\"https://nowlisteningto.dinobansigan.com\">music blog</a> and a <a href=\"https://ateas.dinobansigan.com\">photoblog</a>. Take your pick and let me know how you like them. If you need to get in touch with me, click <a href=\"https://dinobansigan.com/contact\">here</a>.\r\nThank you for visiting and I hope you have a wonderful day.";
 Settings[BlogKeys.IgnoreFolders] = "debug";
 
 // Add any pipeline customizations here

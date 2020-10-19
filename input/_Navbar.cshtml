@@ -20,6 +20,7 @@
     // add them to the new mainPages variable in the order that I want them to show up.
     List<Tuple<string, string>> mainPages = new List<Tuple<string, string>>();
     mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "ARCHIVE"));
+    mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "LATEST POSTS"));
     mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "BOOKMARKS"));
     mainPages.Add(pages.FirstOrDefault(p => p.Item1.ToUpper() == "TAGS"));
 

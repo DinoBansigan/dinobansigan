@@ -1,0 +1,10 @@
+<div class="site-heading">
+    <h1>@Model.WithoutSettings.String(BlogKeys.Title)</h1>
+    @if(Context.String(BlogKeys.Description) != null)
+    {
+        <hr class="small">
+    }
+    <div class="subheading">
+        <p>@Model.WithoutSettings.String(BlogKeys.Description)</p>
+    </div>
+</div>
