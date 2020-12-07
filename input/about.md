@@ -12,12 +12,8 @@ On this blog I plan to write mainly about my experiences as a .NET software deve
 
 ### Elsewhere on the Web
 
-[Above the Earth and Seas](https://ateas.dinobansigan.com) – a sky focused photoblog.
-
-[Personal Journal](https://journal.dinobansigan.com/) – contains personal posts mostly inspired by entries from my own bullet journal.
-
-[Microblog](https://microjournal.dinobansigan.com) – a companion site to my Personal Journal. A place for me to talk about other stuff that’s not necessarily in my bullet journal.
-
-[Now Listening to...](https://nowlisteningto.dinobansigan.com) – a music blog where I share music that I’m listening to *right now*.
+- [Above the Earth and Seas](https://ateas.dinobansigan.com)
+- [Dino's Journal](https://journal.dinobansigan.com/)
+- [Now Listening to...](https://nowlisteningto.com)
 
 Lastly, you can also find me on [LinkedIn](https://www.linkedin.com/in/dinobansigan) and [Github](https://github.com/DinoBansigan).
