@@ -25,4 +25,9 @@ Pipelines["BlogPosts"].Append(
 		{
 			return $"posts/{fileName}";
 		}
+  })).Append(
+  Meta(BlogKeys.Published, (doc, ctx) => //convert published datetime to local time, then to GMT
+  {   	
+		string published = doc.Get<string>("Published");
+		return DateTime.Parse(published).ToUniversalTime().ToString();
   }));
