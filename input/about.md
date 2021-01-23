@@ -8,6 +8,9 @@ I am a .NET Software Developer currently working for a financial company in the 
 
 On this blog I plan to write mainly about my experiences as a .NET software developer. My aim is to keep my blog posts short and simple. They should not take more than 10 minutes to read and the reader should be able to learn something from it.
 
+**Update 01/23/2021:**  
+New software development posts will now be published on my [personal journal](https://journal.dinobansigan.com/). For more information on why I made that change, read [this](https://dinobansigan.com/posts/changes-for-2021).
+
 <hr />
 
 ### Elsewhere on the Web
