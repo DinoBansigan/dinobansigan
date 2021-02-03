@@ -1,0 +1,13 @@
+@{
+    List<Tuple<string, string>> pages = new List<Tuple<string, string>>();
+    pages.Insert(0, Tuple.Create("Above the Earth and Seas", "https://ateas.dinobansigan.com/"));
+    pages.Insert(1, Tuple.Create("Dev Blog", Context.GetLink("latestposts/index.html")));
+    pages.Insert(2, Tuple.Create("Journal", "https://journal.dinobansigan.com/"));
+    pages.Insert(3, Tuple.Create("Now Listening to...", "https://nowlisteningto.com/"));
+    pages.Insert(4, Tuple.Create("Micro.blog", "https://micro.blog/Dino"));
+    
+    foreach(Tuple<string, string> page in pages)
+    {
+        <li><a href="@(page.Item2)">@(page.Item1)</a></li>
+    }
+}
